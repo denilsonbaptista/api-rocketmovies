@@ -1,0 +1,19 @@
+{
+  "name": "movies-api",
+  "version": "1.0.0",
+  "description": "🍿Application in Node.js where the user registers a movie, fills with some information (name, description, note) and creates tags related to it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^9.1.0",
+    "stylelint-config-prettier": "^9.0.5"
+  }
+}
