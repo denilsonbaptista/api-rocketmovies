@@ -4,7 +4,7 @@
   "description": "🍿Application in Node.js where the user registers a movie, fills with some information (name, description, note) and creates tags related to it.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/server.js"
   },
   "keywords": [],
   "author": "",
