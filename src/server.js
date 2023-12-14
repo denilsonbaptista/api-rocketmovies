@@ -1,4 +1,8 @@
+const database = require('./database/sqlite');
+
 const express = require('express');
+
+database();
 
 const app = express();
 app.use(express.json());
