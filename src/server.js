@@ -1,8 +1,8 @@
-const database = require('./database/sqlite');
+const migrations = require('./database/sqlite/migrations');
 
 const express = require('express');
 
-database();
+migrations();
 
 const app = express();
 app.use(express.json());
