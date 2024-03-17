@@ -8,11 +8,22 @@ const uploadConfig = require('./configs/upload');
 const cors = require('cors');
 const express = require('express');
 const routes = require('./routes');
+const cookierParser = require('cookie-parser');
 
 migrationsRun();
 
 const app = express();
-app.use(cors());
+app.use(cookierParser());
+app.use(
+  cors({
+    origin: [
+      'http://localhost:5173',
+      'http://127.0.0.1:5173/',
+      'https://ddrocketmovies.netlify.app',
+    ],
+    credentials: true,
+  }),
+);
 app.use(express.json());
 
 app.use('/files', express.static(uploadConfig.UPLOADS_FOLDER));

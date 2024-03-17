@@ -28,6 +28,8 @@ class SessionsService {
       expiresIn,
     });
 
+    delete user.password;
+
     return {
       user,
       token,
