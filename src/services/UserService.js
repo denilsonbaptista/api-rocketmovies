@@ -34,6 +34,12 @@ class UserService {
       throw new AppError('Usuário não encontrado');
     }
 
+    if (user.id === 29) {
+      throw new AppError(
+        'Você não pode alterar este usuário, pois ele é somente para testes.',
+      );
+    }
+
     const userWithUpdatedEmail = await this.userRepository.findByIdAndEmail(
       null,
       email,
