@@ -5,7 +5,7 @@ class NotesService {
   }
 
   async createNote({ user_id, title, description, rating, tags }) {
-    const note_id = await this.notesRepository.createNote({
+    const [note_id] = await this.notesRepository.createNote({
       user_id,
       title,
       description,
